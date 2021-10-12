@@ -18,7 +18,7 @@
     src: url("../fonts/JosefinSans-SemiBold.ttf");
 }
 
-p {
+p, h4, h5 {
     font-family: "Josefin Sans";
     font-size: 20px;
 }
@@ -27,8 +27,9 @@ h1 {
     font-family: "Josefin Sans Bold";
 }
 
-h2 {
+h2, h3 {
     font-family: "Josefin Sans SemiBold";
+    font-size: 22px;
 }
 
 body {
@@ -68,17 +69,17 @@ header nav {
 header nav ul {
 	overflow: hidden;
 	list-style: none;
-
 }
 
 header nav ul li {
     float: left;
+    width: 25%;
 }
 
 header nav ul li a {
     font-family: "Josefin Sans SemiBold";
 	color: #fcfcfc;
-	padding: 15px 90px;
+	padding: 15px 17%;
 	display: block;
 	text-decoration: none;
 }
@@ -379,73 +380,227 @@ footer {
 	font-size: 16px;
 }
 
+/*Estilos para el form*/
 
-@media screen and (min-width: 768px) {
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: inset;
+
+}
+
+
+.main_form h2 {
+    color: #fff;
+    text-align: center;
+    margin:0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7;
+    box-sizing: border-box;
+    font-size: 16px;
+    border:none;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+#boton{
+    background-color: #31384a;
+    color:white;
+    padding: 20px;
+}
+
+#boton:hover{
+    cursor: pointer;
+}
+
+@media (max-width:480px){
+    form{
+        width: 100%;
+    }
+}
+
+
+
+/*Estilos para nosotros*/
+
+
+
+
+body{
+    text-align: center;
+}
+
+
+.h2_nosotros{
+    display: inline-block;
+    position:relative;
+    font-family: "Dancing Script", cursive;
+    font-size: 40px;
+    margin: 10px;
+
+
+}
+
+/*.h2_nosotros::after,.h2_nosotros::before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color: currentColor;
+    top: 0.6em;
+
+}
+
+
+.h2_nosotros::before{
+    left: -140px;
+}
+
+
+.h2_nosotros::after{
+    right: -140px;
+}*/
+.contenedor_nosotros{
+    max-width: 80%;
+    margin: auto;
+    /*background-image: url();*/
+}
+
+.nuestro_equipo{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:768px){
+    .nuestro_equipo{
+    	display: inline;
+    }
+
+    .nuestro_equipo img{
+    	max-width: 100%;
+    	
+    }
+
+}
+
+.integrante{
+    flex-basis: calc(50% - 1rem);
+    text-align: center;
+}
+
+.integrante img{
+    border-radius: 100px;
+    box-shadow: 1px 10px 15px rgba(0,0,0,0.50);
+}
+
+.integrante img:hover {
+    transform: scale(1.2);
+ 
+
+}
+
+.google_maps{
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 1px 10px 15px rgba(0,0,0,0.50);
+}
+
+
+@media screen and (max-width: 480px){
 	.contenedor {
 		width: 100%;
 	}
 
-    .header {
-        width: 100%;
-    }
+	header {
+		margin: 5px 0px;
+	}
 
-    .header a img{
-        max-width: 100%;
-        margin: 1%;
-    }
+	header nav {
+		width: 50%;
+	}
 
-    header nav {
+
+	.main {
+		width: 100%;
+		padding: 5px 15px;
+	}
+
+	aside {
+		display: none;
+	}
+
+	#map {
+        height: 90%;
+        width: 90%;
+       }
+}
+
+@media screen and (max-width: 768px) {
+	.contenedor {
+		width: 100%;
+	}
+
+
+	header nav {
 		width: 50%;
 		height: 95%;
 		left: -100%;
 		margin: 0;
 		position: fixed;
 	}
+
+	header nav ul li {
+		display: block;
+		float: none;
+		border-bottom: 1px solid rgba(255,255,255, .3);
+	}
+
+	.menu-bar {
+		display: block;
+		width: 100%;
+		background: #ccc;
+	}
+
+	.menu-bar .btn-menu {
+        font-family: "Josefin Sans SemiBold";
+		display: block;
+		padding: 2px;
+		background: hsl(223, 87%, 31%);
+		color: #fcfcfc;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 25px;
+		box-sizing: border-box;
+	}
+
+	.menu-bar i {
+		padding: 15px;
+	}
+
+	#map {
+		max-width: 90%;
+        height: 90%;
+       }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
 	.contenedor {
 		width: 100%;
 	}
-
-    .header {
-        width: 100%;
-    }
-
-    .header a img{
-        max-width: 100%;
-        margin: 1%;
-    }
-
-    header nav {
-		width: 50%;
-		height: 95%;
-		left: -100%;
-		margin: 0;
-		position: fixed;
-	}
 }
-
-@media screen and (min-width: 1200px) {
-	.contenedor {
-		width: 100%;
-	}
-
-    .header {
-        width: 100%;
-    }
-
-    .header a img{
-        max-width: 100%;
-        margin: 1%;
-    }
-
-    header nav {
-		width: 50%;
-		height: 95%;
-		left: -100%;
-		margin: 0;
-		position: fixed;
-	}
-}
-

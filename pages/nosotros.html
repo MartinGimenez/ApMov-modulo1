@@ -3,9 +3,9 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>BookLOOK</title>
+		<title>BuscaBOOKS</title>
 		
-		<link rel="stylesheet" href="css/estilos.css">
+		<link rel="stylesheet" href="../css/estilos.css">
 		<!-- <link rel="stylesheet" href="css/jquery.modal.css"> -->
 		
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -19,7 +19,7 @@
 		<div class="contenedor">
 			<header>
 
-                <a href="#"> <img id="logo" src="images/header.png" "></a>
+                <a href="#"> <img id="logo" src="../images/header.png"></a>
 
 				<div class="menu-bar">
 					<a href="#" class="btn-menu"><i class="fa fa-bars" aria-hidden="true"></i>Menu</a>
@@ -27,49 +27,40 @@
 				
 				<nav>
 					<ul>
-						<li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>INICIO</a></li>
-						<li><a href="./pages/historial.html"><i class="fa fa-clock-o" aria-hidden="true"></i>HISTORIAL</a></li>
-						<li><a href="./pages/nosotros.html"><i class="fa fa-address-card-o" aria-hidden="true"></i>NOSOTROS</a></li>
-						<li><a href="./pages/contacto.html"><i class="fa fa-envelope" aria-hidden="true"></i>CONTACTO</a></li>
+						<li><a href="../index.html"><i class="fa fa-home" aria-hidden="true"></i>INICIO</a></li>
+						<li><a href="./historial.html"><i class="fa fa-clock-o" aria-hidden="true"></i>HISTORIAL</a></li>
+						<li><a href="./nosotros.html"><i class="fa fa-address-card-o" aria-hidden="true"></i>NOSOTROS</a></li>
+						<li><a href="./contacto.html"><i class="fa fa-envelope" aria-hidden="true"></i>CONTACTO</a></li>
 					</ul>
 				</nav>
 			</header>
 
-			<section class="main">
-				
-				<div class="buscador">
-				 <h1>BUSCADOR DE LIBROS</h2>
-				 <input id="buscar">
-				 <label for="" id="label">Titulo, Autor o ISBN</label>
-				 <select id="opción">
-				 	<option value="" selected="selected">Todo</option>
-				   	<option value="intitle:">Título</option>
-				   	<option value="inauthors:">Autor</option>
-				   	<option value="isbn:">ISBN</option>
+			<section class="contenedor_nosotros">
+				<h2 class="h2_nosotros">Nuestros desarrolladores</h2>
+				<div class="nuestro_equipo">
+					<div class="integrante">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT5wOu94iteIMHWu_4_8043UwGeXBdMq334RFneNC2z29DSHbAgJvq1WLxXNPm4LuvCCQ&usqp=CAU">
+						<h3>Jonatan Cantero</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+				<div class="integrante">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT5wOu94iteIMHWu_4_8043UwGeXBdMq334RFneNC2z29DSHbAgJvq1WLxXNPm4LuvCCQ&usqp=CAU">
+					<h3>Martin Gimenez</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>	
+				</div>
 
-				</select>
-
-				 <button id="button1" type="button">Buscar!</button>
-
-				 </div>
-				 <div id="resultado">
-
-
-
+				<h2 class="h2_nosotros">Nuestras oficinas</h2>
+				<iframe class="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.3473592942614!2d-57.958444184167334!3d-34.92282438196034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62dd769b9d7%3A0x8e5a62b28764b5ef!2sCatedral%20de%20La%20Plata!5e0!3m2!1ses!2sar!4v1633835415738!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 			</section>
 
-			<aside>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quo minima error quidem odit, dicta autem consectetur sequi ducimus maiores doloremque hic, cumque. Velit, mollitia, excepturi. Ducimus pariatur, vero doloremque.
-				</p>
-			</aside>
-
+			
 			<footer>
                 <div class="container_footer">
 
                     <div class="box_footer">
                         <div class="logo">
-                            <img src="images/logo book.png" alt="">
+                            <img src="../images/logo book.png" alt="">
                         </div>
                         <div class="descripcion">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, laborum, rem laudantium,
@@ -104,8 +95,9 @@
 
 		</div>
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="js/main.js"></script>
-		<script src="js/menu.js"></script>
-				
+		<script src="../js/main.js"></script>
+		<script src="../js/menu.js"></script>
+
+					
 	</body>
 </html>
