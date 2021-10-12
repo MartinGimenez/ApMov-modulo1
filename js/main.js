@@ -21,8 +21,8 @@ function buscarLibros() {
 				resultado.innerHTML += "<h4>" + data.items[i].volumeInfo.authors + "</h4>"
 				resultado.innerHTML += "<h4>" + data.items[i].volumeInfo.title + "</h4>"*/
 
-				var infoLibroimg = "<div id='btn'> <img src="+data.items[i].volumeInfo.imageLinks.thumbnail+" alt='img' width='90px'/>";
-                //var infoLibroimg = "<div id='btn'> <img src="+data.items[i].volumeInfo.imageLinks.thumbnail+" alt='img' width='90px'/></div>";
+				//var infoLibroimg = "<div id='btn'> <img src="+data.items[i].volumeInfo.imageLinks.thumbnail+" alt='img' width='130px'/>";
+                var infoLibroimg = "<div id='btn'> <img src="+data.items[i].volumeInfo.imageLinks.thumbnail+" alt='img' width='130px'/>";
 
                 var infoLibrotitle = "<h3>" + data.items[i].volumeInfo.title + "</h3>";
                 var infoLibrosubtitle = "<h4>" + data.items[i].volumeInfo.subtitle + "</h4>";
@@ -30,12 +30,13 @@ function buscarLibros() {
                 var infoLibroedit = "<h5>" + data.items[i].volumeInfo.publisher + "</h5>";
                 var infoLibroyear = "<h5>" + data.items[i].volumeInfo.publishedDate + "</h5>";
                 var infoLibrodes = "<br><p>" + data.items[i].volumeInfo.description + "</p>";
-                var infoLibrobtnMore = "<button ><a href=vermas.html?" + data.items[i].id + ">Ver Más</a></button>";
+                var infoLibroMore = "<button><a href=./pages/vermas.html?" + data.items[i].id + ">Más</a></h3></button></div>";
                 var infoLibrobtnbuy = "<button ><a href=" + data.items[i].volumeInfo.buyLink + ">Comprar</a></button>";
                 var infoLibrobtn = "<button type='submit' value=''><a href='mailto:direccion@correo.com?&subject=Libro&body=Hola zoquete. Te comparto este libro, " + infoLibrotitle +  ", esta MUY BUENO!!'>Compartir</a></button></div>";
                 
-                    libro += infoLibroimg+infoLibrotitle+infoLibroautor+infoLibrobtn;
-                    //libro += infoLibroimg;
+                    //libro += infoLibroimg+infoLibrotitle+infoLibroautor+infoLibrobtn;
+                    libro += infoLibroimg + infoLibroMore;
+                    console.log(libro);
 
                     libromas += infoLibroimg+infoLibrotitle+infoLibrosubtitle+infoLibroautor+infoLibroedit+infoLibroyear+infoLibrodes+infoLibrobtnbuy;
                     }
@@ -44,7 +45,7 @@ function buscarLibros() {
 
 				//libro += "</ul>";
 				$("#resultado").html(libro);
-				$("#resultado2").html(libromas);
+				//$("#resultado2").html(libromas);
 
 			}
 			
